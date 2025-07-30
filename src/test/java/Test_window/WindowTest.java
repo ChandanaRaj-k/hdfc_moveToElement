@@ -38,18 +38,22 @@ public static void WindowHandling() throws InterruptedException {
 	
 	Thread.sleep(3000);
 	
-	Set<String> windowIDs=driver.getWindowHandles();
+	Set<String> windowIDs=driver.getWindowHandles();//driver.getWindowHandles();= this will return set of string where each string is unique identifier. set<String>=to store window 
+	//handles in a set because each handle will be unique identifier. 
 	
-	int sizeofwindows=windowIDs.size();
+	int sizeofwindows=windowIDs.size(); //using size() method we are taking the count of tabs opened and storing it in sizeofwindows variable with int as return type. 
 
-	for(String windowId : windowIDs) {
+	for(String windowId : windowIDs) // windowIDs is containing all the window handles opened by Selenium webDriver. 
+		//windowID is temporary variable that holds each individual window handle during iteration. 
+	{
 		
 		
-		String pageName= wh.getPageHead();
+		String pageName= wh.getPageHead(); //here we are storing getPageHead() pageName variable with String as return type. 
 		
-		System.out.println("name of the page " +pageName);
+		System.out.println("name of the page " +pageName);//printing the name of the page. 
 		
-		if(pageName.startsWith("Commissioning of DTC")) {
+		if(pageName.startsWith("Commissioning of DTC")) //if page starts with commisioning statement will break and switches to windowID. 
+		{
 			
 			break;
 			
@@ -59,20 +63,20 @@ public static void WindowHandling() throws InterruptedException {
 		
 	}
 	
-	String pageName= wh.getPageHead();
+	String pageName= wh.getPageHead(); //again here we are getting the page head after for loop is closed. 
 	
 	System.out.println("name of the page " +pageName);
 	
-	wh.setInternalCode("123");
+	wh.setInternalCode("123"); 
 	
 	Thread.sleep(2000);
 	
-    driver.switchTo().newWindow(WindowType.TAB);
-    driver.get("http://192.168.6.64:501/");
+    driver.switchTo().newWindow(WindowType.TAB); //opening new website
+    driver.get("http://192.168.6.64:501/"); 
     
     Thread.sleep(2000);
     
-    windowIDs=driver.getWindowHandles();
+    windowIDs=driver.getWindowHandles(); 
     
     sizeofwindows=windowIDs.size();//NOT taken int datatype we are re-initializing the variable after adding the tab. for override the windowIds. 
     

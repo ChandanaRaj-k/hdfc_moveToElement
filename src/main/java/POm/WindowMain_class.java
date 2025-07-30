@@ -78,7 +78,7 @@ public class WindowMain_class extends windowbase_class{
 
 	public String getPageHead()
 	{
-		return commissionHeadPage.getText();
+		return commissionHeadPage.getText();  //when a method a return type "string" then need to write return statement within the method.
 	}
 	
 	public void setInternalCode(String InternalCode)

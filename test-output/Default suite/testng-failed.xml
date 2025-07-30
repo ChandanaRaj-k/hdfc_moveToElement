@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test_window.HDFCWindow_test">
+      <class name="Test_window.ack_Test">
         <methods>
+          <include name="acknowledge"/>
           <include name="LaunchBrowser"/>
-          <include name="HDFC_window"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- Test_window.HDFCWindow_test -->
+      </class> <!-- Test_window.ack_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

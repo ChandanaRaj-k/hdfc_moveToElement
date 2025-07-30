@@ -21,6 +21,14 @@ public class HDFCWindow_handling extends windowbase_class{
 		return login_move;
 		
 	}
+	
+	@FindBy(xpath="//div[@class='login_dropdown']//div//div//div//a[text()='NetBanking']")
+	private WebElement netBanking_click;
+	public String setNetBankingClick()
+	{
+		return netBanking_click.getText();
+		
+	}
 
 	 
 }

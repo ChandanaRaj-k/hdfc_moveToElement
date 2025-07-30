@@ -73,6 +73,12 @@
     <artifactId>selenium-java</artifactId>
     <version>4.25.0</version> <!-- no need to give chrome driver, it will run dircetly.-->
 </dependency>
+
+<dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+            </dependency>
   </dependencies>
 
   <build>
