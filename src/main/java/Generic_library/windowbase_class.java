@@ -37,7 +37,7 @@ public class windowbase_class {
    
    @AfterTest
    public static void close() {
-	  // driver.quit();
+	  driver.quit();
    }
    
 }
